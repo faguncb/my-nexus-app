@@ -57,5 +57,14 @@ Read the complete documentation in **DOCUMENTATION.md** for:
 - Make sure MetaMask is installed in your browser
 - The app needs an internet connection to fetch blockchain data
 
+### 🐛 Troubleshooting
+
+**If you see "buf.writeUint32BE is not a function":**
+- This means the Buffer polyfill isn't loading
+- Make sure you ran: `npm run dev` (not `next dev --turbopack`)
+- Check that `buffer` package is installed: `npm list buffer`
+- Clear browser cache and reload the page
+- See **TROUBLESHOOTING_BUFFER.md** for detailed help
+
 Happy exploring! 🎉
 
