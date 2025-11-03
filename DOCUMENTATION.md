@@ -700,6 +700,24 @@ DATABASE_SECRET=xyz789  # Server-only, never sent to browser
 
 ---
 
+### "buf.writeUint32BE is not a function"
+
+**Problem:** Nexus SDK needs Buffer polyfill in the browser.
+
+**Solution:**
+1. Make sure `next.config.ts` has webpack polyfill configuration
+2. Verify `buffer` package is installed: `npm list buffer`
+3. Clean build cache and restart:
+```bash
+rm -rf .next
+npm run dev
+```
+4. Clear browser cache and reload
+
+This is already configured in your project!
+
+---
+
 ### "Build errors"
 
 **Problem:** TypeScript or dependency issues.
